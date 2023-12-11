@@ -101,3 +101,7 @@ git rm .\will_be_deleted.txt
 git mv .\will_be_moved.txt has_been_moved.txt
 ```
 ![Скриншот 2](./img/img2.png)
+
+Итоговый вывод `git log`
+
+![Скриншот 3](./img/img3.png)
