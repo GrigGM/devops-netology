@@ -105,3 +105,40 @@ git mv .\will_be_moved.txt has_been_moved.txt
 Итоговый вывод `git log`
 
 ![Скриншот 3](./img/img3.png)
+
+## Работа над ошибками
+
+Восстановил доступ к https://github.com/ и выпустил персональный токен
+
+```
+ winget install --id GitHub.cli
+
+ git remote -v
+origin  https://gitflic.ru/project/gmgrig/devops-netology.git (fetch)
+origin  https://gitflic.ru/project/gmgrig/devops-netology.git (push)
+
+git remote add github https://github.com/GrigGM/devops-netology.git
+
+git remote -v
+github  https://github.com/GrigGM/devops-netology.git (fetch)
+github  https://github.com/GrigGM/devops-netology.git (push)
+origin  https://gitflic.ru/project/gmgrig/devops-netology.git (fetch)
+origin  https://gitflic.ru/project/gmgrig/devops-netology.git (push)
+
+git push -u github master
+
+Необработанное исключение: System.ComponentModel.Win32Exception: Недопустимый дескриптор окна
+   в MS.Win32.ManagedWndProcTracker.HookUpDefWindowProc(IntPtr hwnd)
+   в MS.Win32.ManagedWndProcTracker.OnAppDomainProcessExit()
+   в MS.Internal.ShutDownListener.HandleShutDown(Object sender, EventArgs e)
+Enumerating objects: 28, done.
+Counting objects: 100% (28/28), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (21/21), done.
+Writing objects: 100% (28/28), 97.79 KiB | 12.22 MiB/s, done.
+Total 28 (delta 6), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (6/6), done.
+To https://github.com/GrigGM/devops-netology.git
+ * [new branch]      master -> master
+branch 'master' set up to track 'github/master'.
+```
