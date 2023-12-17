@@ -134,6 +134,70 @@ To https://github.com/GrigGM/devops-netology.git
  * [new tag]         v0.0 -> v0.0
 ```
 
+Добавил коммит для наглядности и создал аннотированный тег `v0.1`
+
+```
+> git log --oneline
+3adfb32 (HEAD -> master, origin/master, origin/HEAD) add tag v0.0
+deda46b (tag: v0.0, gitlab/master, gitflic/master, gitea/master) GitHub, GitLab, GitFlic, Gitea
+fbd71e3 hw
+0aa01c5 GitHub
+259b431 final
+d6cd774 Moved and deleted
+282757f Prepare to delete and move
+858969f Added gitignore
+a62c4bd First commit
+e727dfb add README
+> git tag -a v0.1 -m "test add tag"
+> git log --oneline
+3adfb32 (HEAD -> master, tag: v0.1, origin/master, origin/HEAD) add tag v0.0
+deda46b (tag: v0.0, gitlab/master, gitflic/master, gitea/master) GitHub, GitLab, GitFlic, Gitea
+fbd71e3 hw
+0aa01c5 GitHub
+259b431 final
+d6cd774 Moved and deleted
+282757f Prepare to delete and move
+858969f Added gitignore
+a62c4bd First commit
+e727dfb add README
+```
+`> git show v0.1`
+![Скриншот 1](./img/img1.png)
+
+Легковесные — это что-то очень похожее на ветку, которая не изменяется , — просто указатель на определённый коммит
+
+Аннотированные — теги, которые хранятся в базе данных Git как полноценные объекты. Имеют контрольную сумму, содержат имя автора, его email и дату создания, имеют комментарий и могут быть подписаны и проверены с помощью GNU Privacy Guard (GPG)
+
+Далее скриншоты со страниц разных репозиториев
+
+`GitHub`
+
+![Скриншот 2](./img/img2.png)
+
+![Скриншот 3](./img/img3.png)
+
+![Скриншот 4](./img/img4.png)
+
+`GitLab`
+
+![Скриншот 5](./img/img5.png)
+
+![Скриншот 6](./img/img6.png)
+
+![Скриншот 7](./img/img7.png)
+
+`GitFlic`
+
+![Скриншот 8](./img/img8.png)
+
+`Gitea`
+
+![Скриншот 9](./img/img9.png)
+
+![Скриншот 10](./img/img10.png)
+
+![Скриншот 11](./img/img11.png)
+
 ---
 
 ### Задание 3
