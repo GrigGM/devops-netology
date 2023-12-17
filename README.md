@@ -95,7 +95,44 @@ branch 'master' set up to track 'gitea/master'.
 
 ### Задание 2
 
-
+Текущее состояние
+```
+> git log --oneline
+deda46b (HEAD -> master, origin/master, origin/HEAD, gitlab/master, gitflic/master, gitea/master) GitHub, GitLab, GitFlic, Gitea
+fbd71e3 hw
+0aa01c5 GitHub
+259b431 final
+d6cd774 Moved and deleted
+282757f Prepare to delete and move
+858969f Added gitignore
+a62c4bd First commit
+e727dfb add README
+```
+Создадим легковесный тег v0.0 на HEAD-коммите и запушим его
+```
+> git tag
+> git tag v0.0
+> git tag
+v0.0
+> git log --oneline
+deda46b (HEAD -> master, tag: v0.0, origin/master, origin/HEAD, gitlab/master, gitflic/master, gitea/master) GitHub, GitLab, GitFlic, Gitea
+fbd71e3 hw
+0aa01c5 GitHub
+259b431 final
+d6cd774 Moved and deleted
+282757f Prepare to delete and move
+858969f Added gitignore
+a62c4bd First commit
+e727dfb add README
+``` 
+```
+> git push origin
+Everything up-to-date
+> git push origin --tags
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/GrigGM/devops-netology.git
+ * [new tag]         v0.0 -> v0.0
+```
 
 ---
 
