@@ -164,7 +164,7 @@ e727dfb add README
 `> git show v0.1`
 ![Скриншот 1](./img/img1.png)
 
-Легковесные — это что-то очень похожее на ветку, которая не изменяется , — просто указатель на определённый коммит
+Легковесные — это что-то очень похожее на ветку, которая не изменяется, — просто указатель на определённый коммит
 
 Аннотированные — теги, которые хранятся в базе данных Git как полноценные объекты. Имеют контрольную сумму, содержат имя автора, его email и дату создания, имеют комментарий и могут быть подписаны и проверены с помощью GNU Privacy Guard (GPG)
 
@@ -202,9 +202,71 @@ e727dfb add README
 
 ### Задание 3
 
+Демонстрация истории коммитов при создании веток.
 
+```
+> git log --oneline
+bb72b6a (HEAD -> master, origin/master, origin/HEAD) before #3
+3adfb32 (tag: v0.1, gitlab/master, gitflic/master, gitea/master) add tag v0.0
+deda46b (tag: v0.0) GitHub, GitLab, GitFlic, Gitea
+fbd71e3 hw
+0aa01c5 GitHub
+259b431 final
+d6cd774 Moved and deleted
+282757f Prepare to delete and move
+858969f Added gitignore
+a62c4bd First commit
+e727dfb add README
+```
+```
+> git checkout 282757f
+Note: switching to '282757f'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 282757f Prepare to delete and move
+```
+```
+> git switch -c fix
+Switched to a new branch 'fix'
+> git push -u origin fix
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'fix' on GitHub by visiting:
+remote:      https://github.com/GrigGM/devops-netology/pull/new/fix
+remote:
+To https://github.com/GrigGM/devops-netology.git
+ * [new branch]      fix -> fix
+branch 'fix' set up to track 'origin/fix'.
+```
+![Скриншот 12](./img/img12.png)
+
+После внесения изменений и отправки коммита в удаленный репозиторий картина стала нагляднее
+
+![Скриншот 13](./img/img13.png)
+
+`git log --graph --oneline --all`
+
+![Скриншот 14](./img/img14.png)
 
 ---
 
 ### Задание 4
+
+В качестве IDE использую `Visual Studio Code`, но для задания установил `PyCharm`
+
+![Скриншот 15](img/img15.png)
 
